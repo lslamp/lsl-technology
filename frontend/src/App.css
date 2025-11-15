@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'KodeMono';
-  src: url('/fonts/KodeMono-VariableFont_wght.ttf') format('truetype');
+  src: url('%PUBLIC_URL%/fonts/KodeMono-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 1000;
   font-display: swap;
 }
