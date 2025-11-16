@@ -227,11 +227,20 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn-primary">
-                  Send Message
-                  <Send size={20} />
+                <button 
+                  type="submit" 
+                  className="btn-primary"
+                  disabled={loading}
+                  style={{
+                    opacity: loading ? 0.7 : 1,
+                    cursor: loading ? 'not-allowed' : 'pointer'
+                  }}
+                >
+                  {loading ? 'Sending...' : 'Send Message'}
+                  {loading ? <Loader2 size={20} className="spin" /> : <Send size={20} />}
                 </button>
               </form>
+              </>
             )}
           </div>
 
