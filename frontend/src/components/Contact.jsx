@@ -276,7 +276,7 @@ const Contact = () => {
                     Email
                   </p>
                   <a
-                    href={`mailto:${mockContactInfo.email}`}
+                    href="mailto:lawrence@lsl-technology.com"
                     className="body-medium"
                     style={{
                       color: 'var(--text-primary)',
@@ -286,7 +286,7 @@ const Contact = () => {
                     onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                     onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}
                   >
-                    {mockContactInfo.email}
+                    lawrence@lsl-technology.com
                   </a>
                 </div>
               </div>
