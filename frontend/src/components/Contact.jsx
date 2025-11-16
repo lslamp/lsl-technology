@@ -88,11 +88,24 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '24px'
-              }}>
+              <>
+                {error && (
+                  <div style={{
+                    padding: '16px',
+                    background: 'rgba(255, 0, 0, 0.1)',
+                    border: '1px solid rgba(255, 0, 0, 0.5)',
+                    marginBottom: '24px'
+                  }}>
+                    <p className="body-small" style={{ color: '#ff6b6b' }}>
+                      {error}
+                    </p>
+                  </div>
+                )}
+                <form onSubmit={handleSubmit} style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '24px'
+                }}>
                 <div>
                   <label className="body-small" style={{
                     display: 'block',
