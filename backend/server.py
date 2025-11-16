@@ -39,7 +39,7 @@ class StatusCheckCreate(BaseModel):
 
 class ContactSubmissionCreate(BaseModel):
     name: str = Field(..., min_length=2)
-    email: str
+    email: EmailStr
     company: str = ""
     message: str = Field(..., min_length=10)
 
