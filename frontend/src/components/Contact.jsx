@@ -88,7 +88,7 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <>
+              <React.Fragment>
                 {error && (
                   <div style={{
                     padding: '16px',
@@ -240,7 +240,7 @@ const Contact = () => {
                   {loading ? <Loader2 size={20} className="spin" /> : <Send size={20} />}
                 </button>
               </form>
-              </>
+              </React.Fragment>
             )}
           </div>
 
