@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Mail, Send } from 'lucide-react';
-import { mockContactInfo } from '../mock';
+import { Mail, Send, Loader2 } from 'lucide-react';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,23 +14,37 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock submission - will be replaced with actual API call
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }, 3000);
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      console.log('Contact submission successful:', response.data);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', company: '', message: '' });
+      }, 3000);
+    } catch (err) {
+      console.error('Error submitting contact form:', err);
+      setError(err.response?.data?.detail || 'Failed to submit form. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
