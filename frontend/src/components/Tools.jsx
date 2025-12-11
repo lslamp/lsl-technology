@@ -6,8 +6,23 @@ const Tools = () => {
     <section id="tools" style={{
       padding: '100px 7.6923%',
       background: 'var(--bg-primary)',
-      borderTop: '1px solid var(--border-subtle)'
+      borderTop: '1px solid var(--border-subtle)',
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+      {/* Background Pattern */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: 'url(https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxkYXRhY2VudGVyfGVufDB8fHx8MTc2NTQ0NTI5OHww&ixlib=rb-4.1.0&q=85)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.05,
+        zIndex: 0
+      }} />
       <div style={{
         maxWidth: '1400px',
         margin: '0 auto'
