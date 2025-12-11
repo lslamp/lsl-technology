@@ -7,8 +7,23 @@ const WhyChooseUs = () => {
     <section style={{
       padding: '100px 7.6923%',
       background: 'var(--bg-primary)',
-      borderTop: '1px solid var(--border-subtle)'
+      borderTop: '1px solid var(--border-subtle)',
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+      {/* Decorative Background Image */}
+      <div style={{
+        position: 'absolute',
+        bottom: 0,
+        right: 0,
+        width: '40%',
+        height: '60%',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1584169417032-d34e8d805e8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxkYXRhY2VudGVyfGVufDB8fHx8MTc2NTQ0NTI5OHww&ixlib=rb-4.1.0&q=85)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.08,
+        zIndex: 0
+      }} />
       <div style={{
         maxWidth: '1400px',
         margin: '0 auto'
