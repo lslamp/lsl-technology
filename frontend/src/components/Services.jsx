@@ -9,6 +9,13 @@ const iconMap = {
   headphones: Headphones
 };
 
+const imageMap = {
+  server: 'https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg',
+  network: 'https://images.unsplash.com/photo-1563884705074-7c8b15f16295?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjU0NDUyODl8MA&ixlib=rb-4.1.0&q=85',
+  activity: 'https://images.unsplash.com/photo-1520509414578-d9cbf09933a1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw0fHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjU0NDUyODl8MA&ixlib=rb-4.1.0&q=85',
+  headphones: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg'
+};
+
 const Services = () => {
   return (
     <section id="services" style={{
