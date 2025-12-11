@@ -17,8 +17,31 @@ const Hero = () => {
       justifyContent: 'center',
       padding: '100px 7.6923% 60px',
       background: 'var(--bg-primary)',
-      position: 'relative'
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+      {/* Background Image with Overlay */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '50%',
+        height: '100%',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1762163516269-3c143e04175c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjU0NDUyODl8MA&ixlib=rb-4.1.0&q=85)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.15,
+        zIndex: 0
+      }} />
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '50%',
+        height: '100%',
+        background: 'linear-gradient(to right, var(--bg-primary) 0%, transparent 100%)',
+        zIndex: 1
+      }} />
       <div style={{
         maxWidth: '1400px',
         width: '100%',
