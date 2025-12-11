@@ -45,7 +45,9 @@ const Hero = () => {
       <div style={{
         maxWidth: '1400px',
         width: '100%',
-        margin: '0 auto'
+        margin: '0 auto',
+        position: 'relative',
+        zIndex: 2
       }}>
         <div style={{
           maxWidth: '900px'
