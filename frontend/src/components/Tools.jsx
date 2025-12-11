@@ -25,7 +25,9 @@ const Tools = () => {
       }} />
       <div style={{
         maxWidth: '1400px',
-        margin: '0 auto'
+        margin: '0 auto',
+        position: 'relative',
+        zIndex: 1
       }}>
         <div style={{ marginBottom: '60px' }}>
           <h2 className="display-large" style={{ marginBottom: '20px' }}>
