@@ -42,6 +42,7 @@ const Services = () => {
         }}>
           {mockServices.map((service) => {
             const IconComponent = iconMap[service.icon];
+            const serviceImage = imageMap[service.icon];
             return (
               <div
                 key={service.id}
@@ -49,27 +50,58 @@ const Services = () => {
                 style={{
                   background: 'var(--bg-secondary)',
                   border: '1px solid var(--border-subtle)',
-                  padding: '40px',
-                  transition: 'all 0.4s ease-in-out'
+                  padding: '0',
+                  transition: 'all 0.4s ease-in-out',
+                  overflow: 'hidden',
+                  position: 'relative'
                 }}
               >
+                {/* Service Image */}
                 <div style={{
-                  width: '48px',
-                  height: '48px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: 'rgba(0, 255, 209, 0.1)',
-                  marginBottom: '24px'
+                  width: '100%',
+                  height: '180px',
+                  overflow: 'hidden',
+                  position: 'relative'
                 }}>
-                  <IconComponent size={24} color="var(--brand-primary)" />
+                  <img 
+                    src={serviceImage} 
+                    alt={service.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      opacity: 0.6
+                    }}
+                  />
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: 'linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 100%)'
+                  }} />
                 </div>
-                <h3 className="heading-2" style={{ marginBottom: '16px' }}>
-                  {service.title}
-                </h3>
-                <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
-                  {service.description}
-                </p>
+                
+                <div style={{ padding: '32px 40px 40px' }}>
+                  <div style={{
+                    width: '48px',
+                    height: '48px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: 'rgba(0, 255, 209, 0.1)',
+                    marginBottom: '24px'
+                  }}>
+                    <IconComponent size={24} color="var(--brand-primary)" />
+                  </div>
+                  <h3 className="heading-2" style={{ marginBottom: '16px' }}>
+                    {service.title}
+                  </h3>
+                  <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
+                    {service.description}
+                  </p>
+                </div>
               </div>
             );
           })}
