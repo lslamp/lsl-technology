@@ -53,21 +53,58 @@ const WhyChooseUs = () => {
           {mockFeatures.map((feature) => (
             <div
               key={feature.id}
+              className="dark-hover"
               style={{
-                display: 'flex',
-                gap: '20px'
+                background: 'var(--bg-secondary)',
+                border: '1px solid var(--border-subtle)',
+                padding: '0',
+                overflow: 'hidden',
+                transition: 'all 0.4s ease-in-out'
               }}
             >
-              <div style={{ flexShrink: 0 }}>
-                <CheckCircle2 size={32} color="var(--brand-primary)" />
+              {/* Feature Image */}
+              <div style={{
+                width: '100%',
+                height: '200px',
+                overflow: 'hidden',
+                position: 'relative'
+              }}>
+                <img 
+                  src={featureImages[feature.title]} 
+                  alt={feature.title}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: 0.6
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 100%)'
+                }} />
               </div>
-              <div>
-                <h3 className="heading-2" style={{ marginBottom: '12px' }}>
-                  {feature.title}
-                </h3>
-                <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
-                  {feature.description}
-                </p>
+              
+              <div style={{
+                padding: '32px 40px 40px',
+                display: 'flex',
+                gap: '20px'
+              }}>
+                <div style={{ flexShrink: 0, marginTop: '4px' }}>
+                  <CheckCircle2 size={32} color="var(--brand-primary)" />
+                </div>
+                <div>
+                  <h3 className="heading-2" style={{ marginBottom: '12px' }}>
+                    {feature.title}
+                  </h3>
+                  <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
