@@ -2,6 +2,12 @@ import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { mockFeatures } from '../mock';
 
+const featureImages = {
+  'Flexible Expertise': 'https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxJVCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3MzY1OTA1MTR8MA&ixlib=rb-4.1.0&q=85',
+  'Proven Tools': 'https://images.unsplash.com/photo-1762163516269-3c143e04175c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxzb2x1dGlvbnN8ZW58MHx8fHwxNzM2NTkwNTIyfDA&ixlib=rb-4.1.0&q=85',
+  'Tailored Solutions': 'https://images.pexels.com/photos/3183181/pexels-photo-3183181.jpeg'
+};
+
 const WhyChooseUs = () => {
   return (
     <section style={{
