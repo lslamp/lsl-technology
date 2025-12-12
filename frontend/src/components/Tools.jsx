@@ -1,6 +1,14 @@
 import React from 'react';
 import { mockTools } from '../mock';
 
+const toolImages = {
+  'Zabbix': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxtb25pdG9yaW5nJTIwZGFzaGJvYXJkfGVufDB8fHx8MTczNjU4NzQxN3ww&ixlib=rb-4.1.0&q=85',
+  'Grafana': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxtb25pdG9yaW5nJTIwZGFzaGJvYXJkfGVufDB8fHx8MTczNjU4NzQxN3ww&ixlib=rb-4.1.0&q=85',
+  'Observium': 'https://images.unsplash.com/photo-1762279388979-6a430989284c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw2fHxtb25pdG9yaW5nJTIwZGFzaGJvYXJkfGVufDB8fHx8MTczNjU4NzQxN3ww&ixlib=rb-4.1.0&q=85',
+  'WireGuard VPN': 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw4fHxtb25pdG9yaW5nJTIwZGFzaGJvYXJkfGVufDB8fHx8MTczNjU4NzQxN3ww&ixlib=rb-4.1.0&q=85',
+  'OpenVPN': 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw3fHxtb25pdG9yaW5nJTIwZGFzaGJvYXJkfGVufDB8fHx8MTczNjU4NzQxN3ww&ixlib=rb-4.1.0&q=85'
+};
+
 const Tools = () => {
   return (
     <section id="tools" style={{
