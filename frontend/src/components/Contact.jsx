@@ -293,7 +293,7 @@ const Contact = () => {
                     Email
                   </p>
                   <a
-                    href="mailto:lawrence@lsl-technology.com"
+                    href="mailto:info@lsl-technology.com"
                     className="body-medium"
                     style={{
                       color: 'var(--text-primary)',
@@ -303,7 +303,7 @@ const Contact = () => {
                     onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                     onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}
                   >
-                    lawrence@lsl-technology.com
+                    info@lsl-technology.com
                   </a>
                 </div>
               </div>
