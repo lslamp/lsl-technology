@@ -61,27 +61,57 @@ const Tools = () => {
               style={{
                 background: 'var(--bg-secondary)',
                 border: '1px solid var(--border-subtle)',
-                padding: '32px',
-                transition: 'all 0.4s ease-in-out'
+                padding: '0',
+                transition: 'all 0.4s ease-in-out',
+                overflow: 'hidden'
               }}
             >
+              {/* Tool Image */}
               <div style={{
-                display: 'inline-block',
-                padding: '6px 12px',
-                background: 'rgba(0, 255, 209, 0.1)',
-                border: '1px solid var(--brand-primary)',
-                marginBottom: '16px',
-                fontSize: '12px',
-                color: 'var(--brand-primary)'
+                width: '100%',
+                height: '160px',
+                overflow: 'hidden',
+                position: 'relative'
               }}>
-                {tool.category}
+                <img 
+                  src={toolImages[tool.name]} 
+                  alt={tool.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: 0.7
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 100%)'
+                }} />
               </div>
-              <h3 className="heading-2" style={{ marginBottom: '12px' }}>
-                {tool.name}
-              </h3>
-              <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
-                {tool.description}
-              </p>
+              
+              <div style={{ padding: '24px 32px 32px' }}>
+                <div style={{
+                  display: 'inline-block',
+                  padding: '6px 12px',
+                  background: 'rgba(0, 255, 209, 0.1)',
+                  border: '1px solid var(--brand-primary)',
+                  marginBottom: '16px',
+                  fontSize: '12px',
+                  color: 'var(--brand-primary)'
+                }}>
+                  {tool.category}
+                </div>
+                <h3 className="heading-2" style={{ marginBottom: '12px' }}>
+                  {tool.name}
+                </h3>
+                <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
+                  {tool.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
