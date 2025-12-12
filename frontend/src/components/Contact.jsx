@@ -51,8 +51,23 @@ const Contact = () => {
     <section id="contact" style={{
       padding: '100px 7.6923%',
       background: 'var(--bg-primary)',
-      borderTop: '1px solid var(--border-subtle)'
+      borderTop: '1px solid var(--border-subtle)',
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+      {/* Subtle Background Image */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1570717173024-ec8081c8f8e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxJVCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3MzY1OTA1MTR8MA&ixlib=rb-4.1.0&q=85)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.05,
+        zIndex: 0
+      }} />
       <div style={{
         maxWidth: '1400px',
         margin: '0 auto'
