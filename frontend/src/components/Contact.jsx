@@ -121,8 +121,27 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '24px'
+                  gap: '24px',
+                  position: 'relative',
+                  padding: '40px',
+                  background: 'var(--bg-secondary)',
+                  border: '1px solid var(--border-subtle)',
+                  overflow: 'hidden'
                 }}>
+                  {/* Form Background Image */}
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundImage: 'url(https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxkYXRhY2VudGVyfGVufDB8fHx8MTc2NTQ0NTI5OHww&ixlib=rb-4.1.0&q=85)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: 0.08,
+                    zIndex: 0,
+                    pointerEvents: 'none'
+                  }} />
                 <div>
                   <label className="body-small" style={{
                     display: 'block',
