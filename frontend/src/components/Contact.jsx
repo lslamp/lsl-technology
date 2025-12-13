@@ -231,7 +231,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
+                <div style={{ position: 'relative', zIndex: 1 }}>
                   <label className="body-small" style={{
                     display: 'block',
                     marginBottom: '8px',
@@ -248,7 +248,7 @@ const Contact = () => {
                     style={{
                       width: '100%',
                       padding: '14px 16px',
-                      background: 'var(--bg-secondary)',
+                      background: 'var(--bg-primary)',
                       border: '1px solid var(--border-subtle)',
                       color: 'var(--text-primary)',
                       fontSize: '16px',
