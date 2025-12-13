@@ -269,7 +269,9 @@ const Contact = () => {
                   disabled={loading}
                   style={{
                     opacity: loading ? 0.7 : 1,
-                    cursor: loading ? 'not-allowed' : 'pointer'
+                    cursor: loading ? 'not-allowed' : 'pointer',
+                    position: 'relative',
+                    zIndex: 1
                   }}
                 >
                   {loading ? 'Sending...' : 'Send Message'}
