@@ -14,9 +14,9 @@
   --border-medium: rgba(255, 255, 255, 0.4);
   
   /* MAIN ACCENT COLORS - Brand Colors Only */
-  --brand-primary: #00FFD1;
-  --brand-hover: rgba(0, 255, 209, 0.1);
-  --brand-active: #6FD2C0;
+  --brand-primary: #0080FF;
+  --brand-hover: rgba(0, 128, 255, 0.1);
+  --brand-active: #4DA6FF;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
