@@ -29,20 +29,39 @@ const Header = () => {
     }}>
       <div style={{
         cursor: 'pointer',
-        display: 'flex',
-        flexDirection: 'column',
-        lineHeight: '1'
+        position: 'relative',
+        display: 'inline-block'
       }} onClick={() => scrollToSection('hero')}>
-        <span style={{
+        <div style={{
           fontSize: '24px',
           fontWeight: '600',
-          color: 'var(--brand-primary)'
-        }}>LSL</span>
-        <span style={{
+          color: 'var(--brand-primary)',
+          letterSpacing: '0.05em',
+          lineHeight: '1.2',
+          marginBottom: '2px'
+        }}>
+          LSL
+        </div>
+        <div style={{
           fontSize: '24px',
           fontWeight: '600',
-          color: 'var(--brand-primary)'
-        }}>Technology</span>
+          color: 'var(--brand-primary)',
+          letterSpacing: '0.05em',
+          lineHeight: '1.2',
+          marginLeft: '17px',
+          position: 'relative'
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: '0',
+            left: '-17px',
+            right: '0',
+            height: '3px',
+            background: 'var(--brand-primary)',
+            width: 'calc(100% + 17px)'
+          }}></div>
+          Technology
+        </div>
       </div>
 
       {/* Desktop Navigation */}
