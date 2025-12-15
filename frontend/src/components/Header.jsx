@@ -28,19 +28,12 @@ const Header = () => {
       boxSizing: 'border-box'
     }}>
       <div style={{
-        cursor: 'pointer',
-        display: 'flex',
-        alignItems: 'center'
+        fontSize: '24px',
+        fontWeight: '600',
+        color: 'var(--text-primary)',
+        cursor: 'pointer'
       }} onClick={() => scrollToSection('hero')}>
-        <img 
-          src="https://customer-assets.emergentagent.com/job_netops-support/artifacts/69wzib5c_LSL%20Technology%20logo%20CORRECT%20black%20background.png"
-          alt="LSL Technology"
-          style={{
-            height: '50px',
-            width: 'auto',
-            objectFit: 'contain'
-          }}
-        />
+        LSL Technology
       </div>
 
       {/* Desktop Navigation */}
