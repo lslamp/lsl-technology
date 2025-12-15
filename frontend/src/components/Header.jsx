@@ -30,37 +30,61 @@ const Header = () => {
       <div style={{
         cursor: 'pointer',
         position: 'relative',
-        display: 'inline-block'
+        display: 'inline-block',
+        paddingBottom: '5px'
       }} onClick={() => scrollToSection('hero')}>
+        {/* LSL on top */}
         <div style={{
           fontSize: '24px',
           fontWeight: '600',
           color: 'var(--brand-primary)',
           letterSpacing: '0.05em',
-          lineHeight: '1.2',
-          marginBottom: '2px'
+          lineHeight: '1',
+          marginBottom: '4px'
         }}>
           LSL
         </div>
+        
+        {/* Container for horizontal line and Technology */}
         <div style={{
-          fontSize: '24px',
-          fontWeight: '600',
-          color: 'var(--brand-primary)',
-          letterSpacing: '0.05em',
-          lineHeight: '1.2',
-          marginLeft: '17px',
-          position: 'relative'
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'flex-start'
         }}>
+          {/* Horizontal line that serves as the top of T */}
           <div style={{
             position: 'absolute',
             top: '0',
-            left: '-17px',
-            right: '0',
+            left: '0',
             height: '3px',
             background: 'var(--brand-primary)',
-            width: 'calc(100% + 17px)'
+            width: '100%',
+            zIndex: 1
           }}></div>
-          Technology
+          
+          {/* T stem (vertical part only) */}
+          <div style={{
+            width: '3px',
+            height: '24px',
+            background: 'var(--brand-primary)',
+            marginLeft: '17px',
+            marginTop: '3px',
+            position: 'relative',
+            zIndex: 0
+          }}></div>
+          
+          {/* "echnology" text */}
+          <div style={{
+            fontSize: '24px',
+            fontWeight: '600',
+            color: 'var(--brand-primary)',
+            letterSpacing: '0.05em',
+            lineHeight: '1',
+            marginLeft: '2px',
+            marginTop: '3px'
+          }}>
+            echnology
+          </div>
         </div>
       </div>
 
