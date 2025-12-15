@@ -28,12 +28,21 @@ const Header = () => {
       boxSizing: 'border-box'
     }}>
       <div style={{
-        fontSize: '24px',
-        fontWeight: '600',
-        color: 'var(--text-primary)',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        display: 'flex',
+        flexDirection: 'column',
+        lineHeight: '1'
       }} onClick={() => scrollToSection('hero')}>
-        LSL Technology
+        <span style={{
+          fontSize: '24px',
+          fontWeight: '600',
+          color: 'var(--brand-primary)'
+        }}>LSL</span>
+        <span style={{
+          fontSize: '24px',
+          fontWeight: '600',
+          color: 'var(--brand-primary)'
+        }}>Technology</span>
       </div>
 
       {/* Desktop Navigation */}
